@@ -1,0 +1,38 @@
+header {
+  color: #FFE636;
+  background: #006600;
+  border: solid black 1px;
+  font-size: 32pt;
+  font-family: "Libre Baskerville";
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  padding: 20px;
+}
+
+a {
+  margin-right: 20px;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+article {
+  width: 800px;
+  margin: auto;
+  font-size: 16pt;
+}
+
+.link {
+  color: #006600;
+  text-decoration: none;
+
+}
+
+footer {
+  text-align: center;
+}
