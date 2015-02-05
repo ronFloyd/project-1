@@ -1,24 +1,46 @@
+html, body, h1, h2, h3, h4, ul, ol, li, p, a {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 header {
   color: #FFE636;
   background: #006600;
-  border: solid black 1px;
-  font-size: 32pt;
   font-family: "Libre Baskerville";
   text-align: center;
 }
 
-nav {
-  text-align: center;
-  padding: 20px;
+h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 32pt;
 }
 
-a {
-  margin-right: 20px;
+nav {
+  margin: 20px auto;
+  text-align: center;
+}
+
+nav a {
+  text-align: center;
+  font-weight: bold;
+  background-color: #006600;
+  color: #FFE636;
+  padding: 8px 8px 8px 8px;
+  border-radius: 5px;
+  display: inline;
+}
+
+nav a:hover {
+  background-color: #FFE636;
+  color: #006600;
 }
 
 img {
   display: block;
-  margin: auto;
+  margin: 20px auto;
 }
 
 article {
@@ -27,12 +49,16 @@ article {
   font-size: 16pt;
 }
 
+p {
+  margin: 20px auto;
+}
+
 .link {
-  color: #006600;
   text-decoration: none;
 
 }
 
 footer {
   text-align: center;
+  margin: 20px auto;
 }
