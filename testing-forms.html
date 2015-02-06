@@ -9,7 +9,7 @@
       <h1>Team Tofu Forms</h1>
     </header>
     <form>
-    <section class="contact">
+    <section class="contact" id="contactDetails">
       <fieldset>
         <legend>Contact Details</legend>
         <label>Email:<br />
@@ -20,8 +20,8 @@
         <input type="text" name="telephone" placeholder="Remember landlines?!?" /></label>
       </fieldset>
     </section>
-      <br />
-    <section class="robot">
+
+    <section class="robot" id="robotSection">
       Are you a robot?
       <br />
       <label>
@@ -37,8 +37,8 @@
         Maybe
       </label>
     </section>
-      <br />
-    <section class="comments">
+
+    <section class="comments" id="trollComments">
       <p>
         <label for="comments">
           Comments:
@@ -47,15 +47,49 @@
         <textarea rows="4" cols="40" id="comments" placeholder="Don't be a troll..."></textarea>
       </p>
     </section>
+
     <section>
       <ul>
-        <li>Milk</li>
-        <li>Cheese</li>
-        <li>Eggs</li>
+        <li class="contact">Contact Details</li>
+        <li class="robot">Are you a robot?</li>
+        <li class="comments">Comments:</li>
       </ul>
     </section>
+
+    <button type="button">
+      Submit
+    </button>
+
     </form>
     <script>
+      var highlight = document.querySelectorAll(".contact");
+        for (var i = 0; i < highlight.length; i++) {
+
+         highlight[i].className = "highlight";
+
+         console.log(highlight.length);
+        }
+      // var greenBackgroundElements = document.getElementsByClassName("comments");
+      // console.log(greenBackgroundElements.length);
+
+      // for (var i = 0; i < greenBackgroundElements.length; i++) {
+      //   greenBackgroundElements[i].className = "changed";
+      // }
+
+      // var list = document.querySelectorAll('li');
+      // for (var i = 0; i < list.length; i++) {
+      //   list[i].className = "changed";
+      // }
+      //
+      // var setDefaults = function() {
+      //   var firstItem = document.getElementById('contactDetails');
+      //   var elements = document.querySelectorAll('li');
+
+      //   firstItem.className = "highlight";
+      //   elements[0].className = "highlight";
+      // }
+
+      // setDefaults();
 
     </script>
   </body>
