@@ -51,6 +51,8 @@ article {
 
 p {
   margin: 20px auto;
+  font-family: "Helvetica Neue";
+  font-size: 14pt;
 }
 
 .link {
