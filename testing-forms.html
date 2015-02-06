@@ -2,12 +2,14 @@
 <html>
   <head>
     <title>Testing Forms</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <header>
       <h1>Team Tofu Forms</h1>
     </header>
     <form>
+    <section class="contact">
       <fieldset>
         <legend>Contact Details</legend>
         <label>Email:<br />
@@ -17,7 +19,9 @@
         <label>Telephone:<br />
         <input type="text" name="telephone" placeholder="Remember landlines?!?" /></label>
       </fieldset>
+    </section>
       <br />
+    <section class="robot">
       Are you a robot?
       <br />
       <label>
@@ -32,7 +36,9 @@
         <input type="radio" name="survey" value="maybe" />
         Maybe
       </label>
+    </section>
       <br />
+    <section class="comments">
       <p>
         <label for="comments">
           Comments:
@@ -40,6 +46,17 @@
         <br />
         <textarea rows="4" cols="40" id="comments" placeholder="Don't be a troll..."></textarea>
       </p>
+    </section>
+    <section>
+      <ul>
+        <li>Milk</li>
+        <li>Cheese</li>
+        <li>Eggs</li>
+      </ul>
+    </section>
     </form>
+    <script>
+
+    </script>
   </body>
 </html>
