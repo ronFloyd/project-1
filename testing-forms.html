@@ -6,18 +6,20 @@
   </head>
   <body>
     <header>
-      <h1>Team Tofu Forms</h1>
+      <h1 id="title">Team Tofu Forms</h1>
+      <button id="editTitle" type="button">Edit Title</button>
     </header>
+    <iframe width='560' height='315' seamless='seamless' src='http://www.katu.com/news/business/stumptown-startups/Help-wanted-Portland-tech-industry--291122771.html?embed' frameborder='0' allowfullscreen></iframe>
     <form>
     <section class="contact" id="contactDetails">
       <fieldset>
         <legend>Contact Details</legend>
         <label>Email:<br />
-        <input type="text" name="email" placeholder="Email" /></label><br />
+        <input id="email" type="text" name="email" placeholder="Email" /></label><br />
         <label>Cell:<br />
-        <input type="text" name="cell" placeholder="Cell" /></label><br />
+        <input id="cell" type="text" name="cell" placeholder="Cell" /></label><br />
         <label>Telephone:<br />
-        <input type="text" name="telephone" placeholder="Remember landlines?!?" /></label>
+        <input id="telephone" type="text" name="telephone" placeholder="Remember landlines?!?" /></label>
       </fieldset>
     </section>
 
@@ -25,15 +27,15 @@
       Are you a robot?
       <br />
       <label>
-        <input type="radio" name="survey" value="yes" />
+        <input id="yes" type="radio" name="survey" value="yes" />
         Yes
       </label>
       <label>
-        <input type="radio" name="survey" value="no" />
+        <input id="no" type="radio" name="survey" value="no" />
         No
       </label>
       <label>
-        <input type="radio" name="survey" value="maybe" />
+        <input id="maybe" type="radio" name="survey" value="maybe" />
         Maybe
       </label>
     </section>
@@ -44,7 +46,7 @@
           Comments:
         </label>
         <br />
-        <textarea rows="4" cols="40" id="comments" placeholder="Don't be a troll..."></textarea>
+        <textarea id="textarea" rows="4" cols="40" id="comments" placeholder="Don't be a troll..."></textarea>
       </p>
     </section>
 
@@ -62,35 +64,30 @@
 
     </form>
     <script>
-      var highlight = document.querySelectorAll(".contact");
-        for (var i = 0; i < highlight.length; i++) {
+      function setup() {
+        var textInput;
+        textInput = document.getElementById('email');
+        textInput.focus();
 
-         highlight[i].className = "highlight";
+        var highlight = document.querySelectorAll(".contact");
+          for (var i = 0; i < highlight.length; i++) {
 
-         console.log(highlight.length);
+           highlight[i].className = "highlight";
+
+           console.log(highlight.length);
         }
-      // var greenBackgroundElements = document.getElementsByClassName("comments");
-      // console.log(greenBackgroundElements.length);
+      }
 
-      // for (var i = 0; i < greenBackgroundElements.length; i++) {
-      //   greenBackgroundElements[i].className = "changed";
-      // }
+      window.addEventListener('load', setup, false);
+    </script>
 
-      // var list = document.querySelectorAll('li');
-      // for (var i = 0; i < list.length; i++) {
-      //   list[i].className = "changed";
-      // }
-      //
-      // var setDefaults = function() {
-      //   var firstItem = document.getElementById('contactDetails');
-      //   var elements = document.querySelectorAll('li');
-
-      //   firstItem.className = "highlight";
-      //   elements[0].className = "highlight";
-      // }
-
-      // setDefaults();
-
+    <script>  // Allow 'edit' button to change page title.
+      function editTitle() {
+      var getTitle = document.getElementById('title');
+      getTitle.textContent = prompt("Rename the title:");
+    }
+    var elTitle = document.getElementById('editTitle');
+    elTitle.addEventListener('click', editTitle, false);
     </script>
   </body>
 </html>
